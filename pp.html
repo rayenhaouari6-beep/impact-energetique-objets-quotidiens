@@ -1,0 +1,507 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>L'énergie qu'on ne voit pas : L'histoire cachée de nos objets du quotidien</title>
+<style>
+/* -------------------------------- GLOBAL -------------------------------- */
+body {
+   margin: 0;
+   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+   background: #f8fdf8;
+   color: #333;
+   line-height: 1.6;
+}
+h1, h2, h3, h4 {
+   color: #0c7c3a;
+   font-weight: 600;
+}
+h2 {
+   margin-bottom: 30px;
+   padding-bottom: 15px;
+   border-bottom: 3px solid #c8f5cb;
+}
+section {
+   padding: 60px 10%;
+   border-bottom: 1px solid #e0f7e0;
+}
+.container {
+   max-width: 1200px;
+   margin: auto;
+}
+/* -------------------------------- HEADER -------------------------------- */
+header {
+   background: #f0fff0;
+   padding: 20px 10%;
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   position: sticky;
+   top: 0;
+   z-index: 999;
+   box-shadow: 0 4px 12px rgba(12, 124, 58, 0.1);
+}
+header img {
+   height: 55px;
+}
+nav a {
+   margin-left: 30px;
+   text-decoration: none;
+   color: #0c7c3a;
+   font-weight: 600;
+   transition: color 0.3s;
+   padding: 5px 0;
+   border-bottom: 2px solid transparent;
+}
+nav a:hover {
+   color: #095c2a;
+   border-bottom-color: #0c7c3a;
+}
+/* -------------------------------- HERO -------------------------------- */
+.hero {
+   position: relative;
+   text-align: center;
+}
+.hero img {
+   width: 100%;
+   height: 400px;
+   object-fit: cover;
+   opacity: 0.9;
+}
+.hero-text {
+   position: absolute;
+   top: 50%;
+   left: 50%;
+   transform: translate(-50%, -50%);
+   color: white;
+   font-size: 36px;
+   font-weight: bold;
+   text-shadow: 2px 2px 8px rgba(0,0,0,0.7);
+   background: rgba(12, 124, 58, 0.8);
+   padding: 20px 40px;
+   border-radius: 10px;
+}
+/* -------------------------------- PRODUITS -------------------------------- */
+.grid-produit {
+   display: grid;
+   grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+   gap: 30px;
+   margin-top: 40px;
+}
+.card {
+   background: white;
+   border-radius: 12px;
+   padding: 20px;
+   text-align: center;
+   box-shadow: 0 5px 15px rgba(180, 224, 182, 0.3);
+   transition: transform 0.3s, box-shadow 0.3s;
+   border: 1px solid #e0f7e0;
+}
+.card:hover {
+   transform: translateY(-5px);
+   box-shadow: 0 8px 20px rgba(180, 224, 182, 0.5);
+}
+.card img {
+   width: 100%;
+   height: 150px;
+   object-fit: cover;
+   border-radius: 8px;
+   background: #e8f7e9;
+   margin-bottom: 15px;
+}
+.meta {
+   color: #555;
+   font-size: 0.95em;
+   line-height: 1.5;
+}
+/* -------------------------------- CONTACT -------------------------------- */
+form {
+   display: flex;
+   flex-direction: column;
+   max-width: 500px;
+   background: white;
+   padding: 30px;
+   border-radius: 10px;
+   box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+}
+form input, form textarea {
+   padding: 15px;
+   margin-bottom: 20px;
+   border-radius: 6px;
+   border: 2px solid #d0f0d3;
+   font-family: inherit;
+   transition: border-color 0.3s;
+}
+form input:focus, form textarea:focus {
+   outline: none;
+   border-color: #0c7c3a;
+}
+button {
+   background: linear-gradient(to right, #0c7c3a, #0a9e4e);
+   color: white;
+   padding: 15px;
+   border: none;
+   border-radius: 6px;
+   cursor: pointer;
+   font-weight: bold;
+   font-size: 16px;
+   transition: background 0.3s, transform 0.2s;
+}
+button:hover {
+   background: linear-gradient(to right, #095c2a, #0c7c3a);
+   transform: scale(1.02);
+}
+footer {
+   background: #eaffea;
+   padding: 25px;
+   text-align: center;
+   color: #0c7c3a;
+   font-weight: 500;
+}
+summary {
+   font-weight: bold;
+   cursor: pointer;
+   color: #0c7c3a;
+   padding: 10px;
+   background: #f0fff0;
+   border-radius: 5px;
+   margin: 15px 0;
+}
+details p {
+   background: #f8fff8;
+   padding: 15px;
+   border-radius: 5px;
+   margin-top: 10px;
+}
+</style>
+</head>
+<body>
+
+
+<header>
+   <img src="Logo (2).png" alt="Logo Éco-Conscience">
+   <nav>
+       <a href="#accueil">Accueil</a>
+       <a href="#problematique">Problématique</a>
+       <a href="#analyse">Analyse des produits</a>
+       <a href="#enjeux">Enjeux</a>
+       <a href="#solutions">Solutions</a>
+       <a href="#apropos">À propos</a>
+       <a href="#contact">Contact</a>
+   </nav>
+</header>
+
+
+<section id="accueil" class="hero">
+   <img src="matt-artz-nTRDnDdDYk8-unsplash.jpg" alt="Planète Terre dans les mains">
+   <div class="hero-text">Ce qui se cache derrière nos objets quotidiens</div>
+</section>
+
+
+<!-- ------------------------------------------------ PROBLÉMATIQUE ------------------------------------------------ -->
+<section id="problematique">
+   <h2>L'énergie invisible qui nous entoure</h2>
+
+
+   <p>
+       Regardez autour de vous une minute. Votre téléphone, là, sur la table. Votre ordinateur, probablement ouvert. Le frigo qui ronronne dans la cuisine... Ces objets sont devenus tellement banals qu'on en oublie presque qu'ils existent. Mais saviez-vous que chacun cache une histoire énergétique bien plus complexe qu'il n'y paraît ?
+   </p>
+
+
+   <p>
+       Moi, ce qui m'a vraiment frappé, c'est quand j'ai découvert que pour fabriquer un simple smartphone, il faut extraire des métaux rares - et ces extractions, elles ravagent des paysages entiers ! Sans parler des tonnes de CO₂ émises rien que pour sa production. C'est fou, non ?
+   </p>
+
+
+   <p>
+       Et le pire ? Même éteints, beaucoup de nos appareils continuent de "boire" de l'électricité en douce. On appelle ça la <strong>consommation fantôme</strong>, et franchement, c'est assez effrayant quand on y pense. Chez moi, avant que je m'en rende compte, c'était près de 10% de ma facture qui partait là-dedans.
+   </p>
+
+
+   <p>
+       Mais voilà la bonne nouvelle : on peut tous faire quelque chose. Pas besoin de révolutionner sa vie, juste de petits ajustements. Réparer plutôt que jeter, débrancher vraiment, choisir consciemment... Ces gestes simples, ils font une vraie différence. Je l'ai testé pour vous !
+   </p>
+</section>
+
+
+<!-- ------------------------------------------------ ANALYSE ------------------------------------------------ -->
+<section id="analyse">
+   <h2>Analyse des produits</h2>
+
+
+   <p>
+       J'ai passé du temps à observer ces compagnons du quotidien. Certains sont discrets, d'autres plus gourmands... Voici ce que j'ai découvert sur leur vraie nature énergétique :
+   </p>
+
+
+   <div class="grid-produit">
+
+
+       <div class="card">
+           <img src="Smartphone .jpeg" alt="Smartphone dans une main">
+           <h4>Le smartphone</h4>
+           <p class="meta">
+               Sa consommation quotidienne ? Plutôt faible en apparence. Mais le vrai choc, c'est que <strong>85%</strong> de son empreinte carbone vient de sa fabrication ! Les métaux rares, les mines... Tout ça bien avant qu'il n'arrive dans nos poches.
+           </p>
+       </div>
+
+
+       <div class="card">
+           <img src="pc.jpeg" alt="Ordinateur portable sur un bureau">
+           <h4>L'ordinateur portable</h4>
+           <p class="meta">
+               Mon outil de travail préféré ! J'ai appris à l'utiliser plus malin : veille rapide quand je m'absente, extinction complète le soir. Sur l'année, la différence sur la facture est réelle, je vous assure.
+           </p>
+       </div>
+
+
+       <div class="card">
+           <img src="tv.jpeg" alt="Télévision moderne">
+           <h4>La télé</h4>
+           <p class="meta">
+               Plus l'écran est grand, plus il a faim d'énergie. Surtout les modèles 4K ou 8K. Maintenant, chez nous, on la débranche systématiquement la nuit. Un petit geste qui économise plusieurs jours d'électricité par an !
+           </p>
+       </div>
+
+
+       <div class="card">
+           <img src="refregerateur.jpeg" alt="Réfrigérateur">
+           <h4>Le réfrigérateur</h4>
+           <p class="meta">
+               Notre travailleur infatigable ! Allumé 24h/24, c'est souvent le premier poste de conso d'un foyer. Un bon dégivrage régulier et des joints en bon état ? Ça peut faire baisser la consommation de 15%, facile.
+           </p>
+       </div>
+
+
+       <div class="card">
+           <img src="climatiseur.jpeg" alt="Climatiseur">
+           <h4>Le climatiseur</h4>
+           <p class="meta">
+               En été, il peut carrément doubler la facture. Un truc que j'ai appris : 1°C de moins sur le thermostat, c'est environ 7% de consommation en plus. Maintenant, on privilégie les ventilateurs dans les pièces occupées.
+           </p>
+       </div>
+
+
+       <div class="card">
+           <img src="images.jpeg" alt="Bouilloire électrique">
+           <h4>La bouilloire</h4>
+           <p class="meta">
+               Rapide, oui. Mais super puissante ! Mon astuce du matin : ne faire bouillir que la quantité d'eau dont j'ai vraiment besoin pour mon thé. Ça paraît bête, mais sur l'année, ça compte.
+           </p>
+       </div>
+
+
+       <div class="card">
+           <img src="live linge.jpeg" alt="Lave-linge">
+           <h4>Le lave-linge</h4>
+           <p class="meta">
+               C'est le chauffage de l'eau qui bouffe le plus d'énergie. Depuis que je privilégie les cycles à 30°C et que j'attends qu'il soit bien plein, j'ai vraiment vu la différence sur ma facture.
+           </p>
+       </div>
+
+
+       <div class="card">
+           <img src="micro onde.jpeg" alt="Micro-ondes">
+           <h4>Le micro-ondes</h4>
+           <p class="meta">
+               Finalement assez économe comparé à un four classique. Son secret ? Il chauffe directement les aliments, pas tout l'air autour. Parfait pour réchauffer rapidement sans gaspiller.
+           </p>
+       </div>
+
+
+       <div class="card">
+           <img src="imprimante.jpeg" alt="Imprimante">
+           <h4>L'imprimante</h4>
+           <p class="meta">
+               Sa conso électrique ? Plutôt raisonnable. Mais son vrai coût écologique ? Les cartouches d'encre et le papier ! Depuis que j'imprime en recto-verso par défaut, je divise ma conso de papier par deux.
+           </p>
+       </div>
+
+
+       <div class="card">
+           <img src="retour wifi.jpeg" alt="Routeur WiFi">
+           <h4>Le routeur WiFi</h4>
+           <p class="meta">
+               Ce petit boîtier qui nous connecte au monde tourne sans interruption. Individuellement, sa conso est modeste. Mais multipliée par des millions de foyers... Ça finit par faire beaucoup !
+           </p>
+       </div>
+
+
+       <div class="card">
+           <img src="aspirateur.jpeg" alt="Aspirateur">
+           <h4>L'aspirateur</h4>
+           <p class="meta">
+               Un moteur puissant = une sacrée consommation. Mais un bon entretien (filtres propres, sacs changés régulièrement) permet de garder son efficacité tout en économisant de l'énergie.
+           </p>
+       </div>
+
+
+       <div class="card">
+           <img src="camera.jpeg" alt="Caméra">
+           <h4>La caméra</h4>
+           <p class="meta">
+               Tout dépend de son utilisation. Une caméra de surveillance allumée 24h/24 ? Ça pèse sur la facture. Un appareil photo utilisé de temps en temps ? Beaucoup plus léger.
+           </p>
+       </div>
+
+
+       <div class="card">
+           <img src="watch.jpeg" alt="Montre connectée">
+           <h4>La montre connectée</h4>
+           <p class="meta">
+               Petite mais costaud technologiquement ! Heureusement, son empreinte énergétique quotidienne reste très faible. Surtout comparée à celle d'un smartphone.
+           </p>
+       </div>
+
+
+       <div class="card">
+           <img src="ecouteur sans fil.jpeg" alt="Écouteurs Bluetooth">
+           <h4>Les écouteurs sans fil</h4>
+           <p class="meta">
+               Leur batterie minuscule demande à être rechargée souvent. Et ces petits composants électroniques ? Rarement bien recyclés. Un point noir pour ces objets pourtant si pratiques.
+           </p>
+       </div>
+
+
+       <div class="card">
+           <img src="gaz.jpeg" alt="Plaque de cuisson induction">
+           <h4>La plaque induction</h4>
+           <p class="meta">
+               Plus performante et économe qu'une plaque classique ! Elle chauffe ultra-rapidement. Astuce : couvrir les casseroles permet d'économiser encore plus d'énergie.
+           </p>
+       </div>
+
+
+       <div class="card">
+           <img src="cheveux.jpeg" alt="Sèche-cheveux">
+           <h4>Le sèche-cheveux</h4>
+           <p class="meta">
+               Une vraie bouffée d'énergie sur quelques minutes ! Mais essorer ses cheveux avec une serviette avant de l'utiliser réduit considérablement le temps de séchage nécessaire.
+           </p>
+       </div>
+
+
+   </div>
+</section>
+
+
+<!-- ------------------------------------------------ ENJEUX ------------------------------------------------ -->
+<section id="enjeux">
+   <h2>Enjeux</h2>
+
+
+   <p>
+       Ce qui m'a poussé à creuser ce sujet, c'est en voyant des images de décharges électroniques. Des montagnes de nos vieux téléphones, ordinateurs, télés... Tout ça finissant dans des pays où on ne sait pas vraiment les traiter. Les sols contaminés, les cours d'eau pollués... Ça m'a retourné l'estomac, je vous avoue.
+   </p>
+
+
+   <p>
+       Le réchauffement climatique, pour moi, c'est devenu concret. Dans mon propre jardin, je vois les saisons se décaler, les températures augmenter. Et je sais que chaque kilowattheure économisé, c'est un petit pas dans la bonne direction.
+   </p>
+  
+   <p>
+       Mais attention, je ne veux pas faire dans le catastrophisme ! Parce que j'ai aussi découvert une chose super motivante : on peut vraiment agir. Et souvent, ces actions sont bonnes pour la planète ET pour notre portefeuille. C'est ce qui me donne envie de continuer à chercher des solutions.
+   </p>
+</section>
+
+
+<!-- ------------------------------------------------ SOLUTIONS ------------------------------------------------ -->
+<section id="solutions">
+   <h2>Solutions</h2>
+
+
+   <p>
+       Je ne vous parle pas de théorie, mais de ce que j'ai vraiment mis en place chez moi. Et la bonne nouvelle, c'est que ces changements sont souvent plus simples qu'on ne le croit !
+   </p>
+
+
+   <div style="background: #f0fff0; padding: 25px; border-radius: 10px; margin: 25px 0;">
+       <h3 style="color: #0c7c3a; margin-top: 0;">Ce qui a vraiment changé mon quotidien :</h3>
+       <ul style="columns: 2; column-gap: 40px;">
+           <li><strong>Réparer plutôt que jeter</strong> : Avant de penser au nouvel achat, je dois me demander toujours : "Peut-on le réparer ?" Souvent, la réponse est oui !</li>
+           <li><strong>Le reconditionné, mon nouveau réflexe</strong> : Même qualité, prix plus doux, impact bien moindre. Que demander de plus ?</li>
+           <li><strong>Éteindre pour de vrai</strong> : Les multiprises avec interrupteur ? Une révolution dans mon salon. Fini la consommation fantôme !</li>
+           <li><strong>Lire les étiquettes énergétiques</strong> : Je ne les zappe plus. Un appareil A+++ peut paraître plus cher, mais sur la durée, ça vaut le coup.</li>
+           <li><strong>Recycler intelligemment</strong> : Les magasins reprennent souvent les vieux appareils. Une solution simple pour leur donner une seconde vie.</li>
+       </ul>
+   </div>
+
+
+   <p>
+       Le plus encourageant en appliquant ces astuces est que j'ai vu ma facture d'électricité baisser mois après mois. Pas de manière spectaculaire, mais assez pour que ça se remarque. Et ça, c'est plutôt motivant pour continuer !
+   </p>
+</section>
+
+
+<!-- ------------------------------------------------ À PROPOS ------------------------------------------------ -->
+<section id="apropos">
+   <h2>À propos</h2>
+
+
+   <p>
+       Tout a commencé il y a environ deux ans. Une facture d'électricité particulièrement salée m'a fait tiquer. "Mais pourquoi est-ce si élevé ?" Je me suis mis à fouiller, à mesurer, à comprendre... Et j'ai découvert ce monde fascinant de l'énergie qu'on ne voit pas.
+   </p>
+
+
+   <p>
+       Je m'appelle Rayen, et je ne suis pas un expert. Juste quelqu'un de curieux qui a voulu comprendre ce qui se cachait derrière le fonctionnement de ses objets du quotidien. Ce site, c'est un peu mon carnet de bord. Ce que j'ai appris, ce que j'ai testé, ce qui a marché... ou pas.
+   </p>
+  
+   <p style="background: #e8f7e9; padding: 20px; border-radius: 8px; border-left: 4px solid #0c7c3a;">
+       <em>"Ce qui me motive ? L'idée qu'un petit geste, répété par des millions de personnes, peut créer un immense changement. Et que souvent, ce qui est bon pour la planète est aussi bon pour notre portefeuille."</em>
+   </p>
+</section>
+
+
+<!-- ------------------------------------------------ CONTACT ------------------------------------------------ -->
+<section id="contact">
+   <h2>Contact</h2>
+
+
+   <p>
+       Une question qui vous trotte dans la tête ? Une astuce à partager ? Ou simplement envie de discuter de ces sujets ? Je serais vraiment content d'échanger avec vous.
+   </p>
+
+
+   <form action="mailto:rhaouari.elve@ec-tunis.com" method="POST" enctype="text/plain">
+       <input type="text" placeholder="Votre prénom" required>
+       <input type="text" placeholder="Votre nom" required>
+       <input type="email" placeholder="Votre email" required>
+       <input type="tel" placeholder="Votre téléphone (si vous préférez)">
+       <textarea rows="5" placeholder="Ce que vous avez envie de partager..." required></textarea>
+       <button type="submit">Envoyer mon message</button>
+   </form>
+
+
+   <p style="margin-top: 30px;">
+       Vous préférez un email direct ? Écrivez-moi simplement à : 
+       <a href="mailto:rhaouari.eleve@ec-tunis.com" style="color: #0c7c3a; font-weight: bold;">rhaouari.eleve@ec-tunis.com</a>
+   </p>
+
+
+   <details>
+       <summary>Questions fréquentes</summary>
+       <p>
+           <strong>"Mais est-ce que ces petits gestes changent vraiment quelque chose ?"</strong><br>
+           C'est LA question qu'on me pose le plus. Et ma réponse : absolument ! J'ai vu ma propre consommation baisser, et multipliée par des millions de personnes, l'impact devient colossal. Chaque geste compte, vraiment.
+       </p>
+       <p>
+           <strong>"Je suis déjà débordé, par où commencer ?"</strong><br>
+           Commencez par une seule chose ! Moi, j'ai débuté avec les multiprises à interrupteur. Une fois l'habitude prise, le reste est venu naturellement. Pas besoin de tout changer d'un coup.
+       </p>
+       <p>
+           <strong>"Puis-je utiliser ces infos pour mon projet ?"</strong><br>
+           Bien sûr ! N'hésitez pas à partager et à citer vos sources. L'important, c'est que l'information circule et qu'on en parle ensemble.
+       </p>
+   </details>
+</section>
+
+
+<footer>
+   © 2025 — <strong>L'énergie invisible de nos objets</strong> — Une exploration personnelle par Rayen
+</footer>
+
+
+</body>
+</html>
